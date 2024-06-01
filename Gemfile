@@ -45,8 +45,9 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "sqlite3", "~> 1.4"
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[ mri windows ]
 end
 
 group :development do
